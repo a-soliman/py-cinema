@@ -16,3 +16,13 @@ films = {
 		"avilable_seats": 5
 	}
 }
+
+while True:
+	# Get the user's choice of film
+	choice = input('Which movie would you like to watch?: ').strip().title()
+
+	# check if the moview is avialable in the dict.
+	if choice in films:
+		pass
+	else:
+		print("We don't have that film.")
