@@ -23,6 +23,11 @@ while True:
 
 	# check if the moview is avialable in the dict.
 	if choice in films:
-		pass
+		age = int(input('How old are you?: ').strip())
+
+		if age >= films[choice]["age"]:
+			print('Agreed')
+		else:
+			print("You are too young for this movie")		
 	else:
 		print("We don't have that film.")
