@@ -26,8 +26,16 @@ while True:
 		age = int(input('How old are you?: ').strip())
 
 		if age >= films[choice]["age"]:
-			print('Agreed')
+			
+			#check enough seats
+			if films[choice]["avilable_seats"] > 0:
+				print('Enjoy watching {}.'.format(choice))
+				films[choice]["avilable_seats"] = films[choice]["avilable_seats"] -1
+			
+			else:
+				print('No seats avialable...')
+
 		else:
-			print("You are too young for this movie")		
+			print("You are too young for watching {}!".format(choice))		
 	else:
 		print("We don't have that film.")
